@@ -7,6 +7,6 @@ export const projects = [
     name: "Personal Website",
     images: [websiteImg1, websiteImg2],
     description: "The website you are currently on. Built with React and TailwindCSS. Hosted through GH Pages.",
-    github: "",
+    github: "https://github.com/liqki/liqki.github.io",
   },
 ];

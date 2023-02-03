@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import ImageSlider from "../components/ImageSlider";
 import OpenNavMenu from "../components/OpenNavMenu";
+import reactStringReplace from "react-string-replace";
 
 function Project({ setIsOpened }) {
   // get project id from url
@@ -27,7 +28,13 @@ function Project({ setIsOpened }) {
           <ImageSlider slides={project.images} />
         </motion.div>
         <motion.div initial={{ translateX: -300, opacity: 0 }} animate={{ translateX: 0, opacity: 1 }} transition={{ duration: 0.3, delay: 0.6 }}>
-          <p className="lg:max-w-[500px] lg:text-xl xl:max-w-[700px] xl:text-2xl text-center text-lg max-w-[300px]">{project.description}</p>
+          <p className="lg:max-w-[500px] lg:text-xl xl:max-w-[700px] xl:text-2xl text-center text-lg max-w-[300px]">
+            {reactStringReplace(project.description, /(https?:\/\/\S+)/g, (match, i) => (
+              <a key={match + i} href={match} className="underline">
+                {match.split("//").pop()}
+              </a>
+            ))}
+          </p>
         </motion.div>
         <motion.div
           className={`mt-4 ${project.github === null || (project.github === "" && "hidden")}`}

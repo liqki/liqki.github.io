@@ -36,7 +36,7 @@ function Project({ setIsOpened }) {
           transition={{ duration: 0.3, delay: 0.9 }}
         >
           <a href={project.github} className="text-5xl hover:cursor-pointer hover:text-gray-400">
-            <FaGithub />
+            <FaGithub className="hover:scale-[1.05] transition-transform duration-300" />
           </a>
         </motion.div>
       </div>

@@ -5,6 +5,11 @@ on:
     branches:
       - main
 
+env:
+  EMAIL_SERVICE_ID: ${{ secrets.EMAIL_SERVICE_ID }}
+  EMAIL_TEMPLATE_ID: ${{ secrets.EMAIL_TEMPLATE_ID }}
+  EMAIL_PUBLIC_KEY: ${{ secrets.EMAIL_PUBLIC_KEY }}
+
 jobs:
   build:
     name: Build

@@ -31,15 +31,13 @@ function Contact({ setIsOpened }) {
     }
 
     // send email using emailjs
-    emailjs.sendForm(import.meta.env.EMAIL_SERVICE_ID, import.meta.env.EMAIL_TEMPLATE_ID, form.current, import.meta.env.EMAIL_PUBLIC_KEY).then(setName(""), setEmail(""), setMessage("")),
-      setSuccess(true),
-      setError(false),
-      setWarning(false),
-      setIsSent(true);
-    (error) => {
-      setError(true);
-      console.log(error);
-    };
+    emailjs
+      .sendForm(import.meta.env.EMAIL_SERVICE_ID, import.meta.env.EMAIL_TEMPLATE_ID, form.current, import.meta.env.EMAIL_PUBLIC_KEY)
+      .then(setName(""), setEmail(""), setMessage(""), setSuccess(true), setError(false), setWarning(false), setIsSent(true)),
+      (error) => {
+        setError(true);
+        console.log(error);
+      };
   };
 
   return (

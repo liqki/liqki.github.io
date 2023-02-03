@@ -1,0 +1,11 @@
+[
+  { "name": "HTML", "img": "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg", "link": "https://www.w3schools.com/html/" },
+  { "name": "CSS", "img": "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg", "link": "https://www.w3schools.com/css/" },
+  { "name": "JavaScript", "img": "https://upload.vectorlogo.zone/logos/javascript/images/239ec8a4-163e-4792-83b6-3f6d96911757.svg", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+  { "name": "Java", "img": "https://www.vectorlogo.zone/logos/java/java-icon.svg", "link": "https://www.java.com/" },
+  { "name": "React", "img": "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg", "link": "https://reactjs.org/" },
+  { "name": "TailwindCSS", "img": "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg", "link": "https://tailwindcss.com/" },
+  { "name": "Firebase", "img": "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg", "link": "https://firebase.google.com/" },
+  { "name": "VS Code", "img": "https://upload.vectorlogo.zone/logos/visualstudio_code/images/a4381320-f83c-4a29-9db3-b241c1d096b1.svg", "link": "https://code.visualstudio.com/" },
+  { "name": "IntelliJ", "img": "https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg", "link": "https://www.jetbrains.com/idea/" }
+]

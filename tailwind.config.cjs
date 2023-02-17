@@ -16,6 +16,10 @@ module.exports = {
       minHeight: {
         footer: "calc(100vh - 40px)",
       },
+      screens: {
+        lowheight: { raw: "(max-height: 730px)" },
+        medheight: { raw: "(max-height: 800px)" },
+      },
       animation: {
         move: "move 7s infinite ease-in-out",
         "slide-in": "slide-in 0.5s forwards",

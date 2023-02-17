@@ -23,7 +23,9 @@ function NavBar({ isOpened, setIsOpened }) {
   return (
     <>
       <nav className="text-light bg-dark h-20 fixed top-0 w-screen flex justify-between items-center z-20 noselect">
-        <div className="ml-5 text-2xl xl:text-4xl font-pacifico">liqki</div>
+        <Link to={"/"} className="ml-5 text-2xl xl:text-4xl font-pacifico">
+          liqki
+        </Link>
         {/* mobile */}
         <div className="lg:hidden">
           <HiMenuAlt3

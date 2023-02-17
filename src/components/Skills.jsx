@@ -23,7 +23,7 @@ function Skills({ setIsOpened }) {
   return (
     <>
       <div className="lg:text-2xl h-footer w-screen bg-dark text-light snap-start flex justify-center items-center flex-col text-xl noselect overflow-hidden">
-        <h2 className="lg:text-7xl text-5xl py-20" ref={ref}>
+        <h2 className="medheight:text-4xl lg:text-7xl text-5xl py-20" ref={ref}>
           Skills & Tools
         </h2>
         <div className="flex flex-wrap justify-center gap-10 max-w-[60%]">

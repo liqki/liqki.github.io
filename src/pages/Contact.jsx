@@ -44,9 +44,9 @@ function Contact({ setIsOpened }) {
     <>
       <OpenNavMenu setIsOpened={setIsOpened} />
       <div className="h-footer w-screen bg-dark text-light flex justify-center items-center noselect">
-        <motion.div className="-mb-10 lg:h-2/3 lg:w-2/5 h-2/3 w-3/4 bg-[#151c25] rounded-3xl" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <motion.div className="-mb-10 medheight:h-4/5 lg:h-2/3 lg:w-2/5 h-2/3 w-3/4 bg-[#151c25] rounded-3xl" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <div className="h-[100%] flex flex-col justify-evenly items-center">
-            <h2 className="md:text-4xl lg:mb-10 text-2xl">CONTACT ME</h2>
+            <h2 className="md:text-4xl lowheight:text-3xl lg:mb-10 text-2xl">CONTACT ME</h2>
             <form ref={form} className="lg:gap-16 lg:w-96 md:w-80 gap-10 w-52 flex flex-col">
               <input value={name} onChange={(e) => setName(e.target.value)} name="user_name" className="contact-input" type="text" placeholder="Name" />
               <input value={email} onChange={(e) => setEmail(e.target.value)} name="user_email" className="contact-input" type="email" placeholder="Email" />

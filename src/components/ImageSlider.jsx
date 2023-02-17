@@ -32,7 +32,14 @@ function ImageSlider({ slides }) {
         {slides.map((slide, index) => {
           return (
             <div key={index} className={`${index === current ? "opacity-100 duration-500 scale-[1.08]" : "opacity-0 duration-1000 ease-in"}`}>
-              {index === current && <img src={slide} className="xl:w-[700px] lg:w-[500px] w-[300px] rounded-xl my-12 mx-auto" onDragStart={(e) => e.preventDefault()} {...swipeHandler} />}
+              {index === current && (
+                <img
+                  src={slide}
+                  className="xl:w-[700px] lg:w-[500px] medheight:w-[250px] lowheight:w-[200px] w-[300px] rounded-xl my-12 mx-auto"
+                  onDragStart={(e) => e.preventDefault()}
+                  {...swipeHandler}
+                />
+              )}
             </div>
           );
         })}

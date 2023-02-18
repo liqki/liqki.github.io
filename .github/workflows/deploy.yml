@@ -30,7 +30,7 @@ jobs:
       - name: Build project
         run: npm run build
 
-      -name: Add CNAME file
+      - name: Add CNAME file
         run: echo 'liqki.me' > ./dist/CNAME
 
       - name: Upload production-ready build files

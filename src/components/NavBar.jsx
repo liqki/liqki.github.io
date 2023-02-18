@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaGithub, FaInstagram, FaTwitter, FaDiscord } from "react-icons/fa";
+import { FaGithub, FaDiscord } from "react-icons/fa";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { useSwipeable } from "react-swipeable";
+import { BsFillChatTextFill } from "react-icons/bs";
 
 function NavBar({ isOpened, setIsOpened }) {
   const [isClosing, setIsClosing] = useState(false);
@@ -52,18 +53,10 @@ function NavBar({ isOpened, setIsOpened }) {
                       e.preventDefault();
                     }}
                     href="https://github.com/liqki"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <FaGithub />
-                  </a>
-                </li>
-                <li className="rounded-full border-white border-2 p-1 hover:text-pink-400 hover:border-pink-400 hover:cursor-pointer hover:scale-[1.1] transition-transform duration-300">
-                  <a
-                    onDragStart={(e) => {
-                      e.preventDefault();
-                    }}
-                    href="https://www.instagram.com/l1qki/"
-                  >
-                    <FaInstagram />
                   </a>
                 </li>
                 <li className="rounded-full border-white border-2 p-1 hover:text-[#7289da] hover:border-[#7289da] hover:cursor-pointer hover:scale-[1.1] transition-transform duration-300">
@@ -72,18 +65,22 @@ function NavBar({ isOpened, setIsOpened }) {
                       e.preventDefault();
                     }}
                     href="https://www.discordapp.com/users/557569088466190356"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <FaDiscord />
                   </a>
                 </li>
-                <li className="rounded-full border-white border-2 p-1 hover:text-blue-400 hover:border-blue-400 hover:cursor-pointer hover:scale-[1.1] transition-transform duration-300">
+                <li className="rounded-full border-white border-2 p-1 hover:text-pink-400 hover:border-pink-400 hover:cursor-pointer hover:scale-[1.1] transition-transform duration-300">
                   <a
                     onDragStart={(e) => {
                       e.preventDefault();
                     }}
-                    href="https://twitter.com/l1qki"
+                    href="https://chat.liqki.me"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <FaTwitter />
+                    <BsFillChatTextFill />
                   </a>
                 </li>
                 <li className="text-xl rounded-md border-white border-2 p-1 px-3 ml-3 hover:text-green-500 hover:border-green-500 hover:cursor-pointer hover:scale-[1.1] transition-transform duration-300">
@@ -120,18 +117,10 @@ function NavBar({ isOpened, setIsOpened }) {
                       e.preventDefault();
                     }}
                     href="https://github.com/liqki"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <FaGithub />
-                  </a>
-                </li>
-                <li className="rounded-full border-white border-2 p-1 hover:text-pink-400 hover:border-pink-400 hover:cursor-pointer hover:scale-[1.1] transition-transform duration-300">
-                  <a
-                    onDragStart={(e) => {
-                      e.preventDefault();
-                    }}
-                    href="https://www.instagram.com/l1qki/"
-                  >
-                    <FaInstagram />
                   </a>
                 </li>
                 <li className="rounded-full border-white border-2 p-1 hover:text-[#7289da] hover:border-[#7289da] hover:cursor-pointer hover:scale-[1.1] transition-transform duration-300">
@@ -140,18 +129,22 @@ function NavBar({ isOpened, setIsOpened }) {
                       e.preventDefault();
                     }}
                     href="https://www.discordapp.com/users/557569088466190356"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <FaDiscord />
                   </a>
                 </li>
-                <li className="rounded-full border-white border-2 p-1 hover:text-blue-400 hover:border-blue-400 hover:cursor-pointer hover:scale-[1.1] transition-transform duration-300">
+                <li className="rounded-full border-white border-2 p-1 hover:text-pink-400 hover:border-pink-400 hover:cursor-pointer hover:scale-[1.1] transition-transform duration-300">
                   <a
                     onDragStart={(e) => {
                       e.preventDefault();
                     }}
-                    href="https://twitter.com/l1qki"
+                    href="https://chat.liqki.me"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <FaTwitter />
+                    <BsFillChatTextFill />
                   </a>
                 </li>
               </ul>

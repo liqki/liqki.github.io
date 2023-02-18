@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import astronaut from "../assets/astronaut.png";
 import TypewriterComponent from "typewriter-effect";
-import { BsArrowDownCircleFill } from "react-icons/bs";
-import { FaGithub, FaInstagram, FaTwitter, FaDiscord } from "react-icons/fa";
+import { BsArrowDownCircleFill, BsFillChatTextFill } from "react-icons/bs";
+import { FaGithub, FaDiscord } from "react-icons/fa";
 import Skills from "../components/Skills";
 import OpenNavMenu from "../components/OpenNavMenu";
 
@@ -56,6 +56,8 @@ function Home({ setIsOpened }) {
               }}
               href="https://github.com/liqki"
               className="hover:text-gray-400 hover:scale-[1.1] transition-transform duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaGithub />
             </a>
@@ -63,17 +65,10 @@ function Home({ setIsOpened }) {
               onDragStart={(e) => {
                 e.preventDefault();
               }}
-              href="https://www.instagram.com/l1qki/"
-              className="hover:text-pink-400 hover:scale-[1.1] transition-transform duration-300"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              onDragStart={(e) => {
-                e.preventDefault();
-              }}
               href="https://www.discordapp.com/users/557569088466190356"
               className="hover:text-[#7289da] hover:scale-[1.1] transition-transform duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaDiscord />
             </a>
@@ -81,10 +76,12 @@ function Home({ setIsOpened }) {
               onDragStart={(e) => {
                 e.preventDefault();
               }}
-              href="https://twitter.com/l1qki"
-              className="hover:text-blue-400 hover:scale-[1.1] transition-transform duration-300"
+              href="https:chat.liqki.me"
+              className="hover:text-pink-400 hover:scale-[1.1] transition-transform duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <FaTwitter />
+              <BsFillChatTextFill />
             </a>
           </div>
           <div className="absolute bottom-0 text-sm flex w-screen items-center justify-center mb-4 gap-2 text-light">

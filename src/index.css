@@ -20,7 +20,7 @@
   }
 
   .contact-input {
-    @apply bg-transparent border-b-2 border-blue-900 pb-2 leading-5 text-[20px] focus:outline-none focus:border-green-600;
+    @apply bg-transparent border-b-2 border-blue-900 pb-2 medheight:pb-0 leading-5 text-[20px] focus:outline-none focus:border-green-600;
   }
 }
 

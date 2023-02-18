@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import OpenNavMenu from "../components/OpenNavMenu";
@@ -19,6 +19,11 @@ function Contact({ setIsOpened }) {
 
   // ref to access form
   const form = useRef();
+
+  useEffect(() => {
+    if (name === "" || email === "" || message === "") return;
+    setWarning(false);
+  }, [name, email, message]);
 
   const sendEmail = (e) => {
     if (isSent) return;
@@ -44,7 +49,7 @@ function Contact({ setIsOpened }) {
     <>
       <OpenNavMenu setIsOpened={setIsOpened} />
       <div className="h-footer w-screen bg-dark text-light flex justify-center items-center noselect">
-        <motion.div className="-mb-10 medheight:h-4/5 lg:h-2/3 lg:w-2/5 h-2/3 w-3/4 bg-[#151c25] rounded-3xl" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <motion.div className="-mb-10 medheight:h-4/5 medheight:w-[55%] lg:h-2/3 lg:w-2/5 h-2/3 w-3/4 bg-[#151c25] rounded-3xl" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <div className="h-[100%] flex flex-col justify-evenly items-center">
             <h2 className="md:text-4xl lowheight:text-3xl lg:mb-10 text-2xl">CONTACT ME</h2>
             <form ref={form} className="lg:gap-16 lg:w-96 md:w-80 gap-10 w-52 flex flex-col">
@@ -55,13 +60,12 @@ function Contact({ setIsOpened }) {
                 <button
                   disabled={isSent}
                   onClick={sendEmail}
-                  className="md:mx-14 lg:mx-28 mx-5 text-lg py-3 rounded-full outline outline-2 outline-green-600 hover:bg-green-600 hover:scale-[1.1] transition-transform duration-300 hover:outline-none"
+                  className={`md:mx-14 lg:mx-28 mx-5 text-lg py-3 rounded-full outline outline-2 ${
+                    warning || error ? "outline-red-600 hover:bg-red-600 hover:outline-none" : `${success ? "outline-none" : "outline-green-600"} hover:bg-green-600 hover:outline-none`
+                  } ${success && "bg-green-600 hover:scale-[1]"} hover:scale-[1.1] transition-transform duration-300`}
                 >
-                  Send
+                  {success ? "Success" : "Send"}
                 </button>
-                {warning && <label className="text-center text-red-600 lg:mt-5 lg:mb-0 -mb-10 mt-2">Please fill in all fields!</label>}
-                {success && <label className="text-center text-green-500 lg:mt-5 lg:mb-0 -mb-10 mt-2">Succes! Thanks for leaving a message!</label>}
-                {error && <label className="text-center text-red-600 lg:mt-5 lg:mb-0 -mb-10 mt-2">An error occured!</label>}
               </div>
             </form>
           </div>

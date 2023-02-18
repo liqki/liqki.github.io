@@ -65,7 +65,7 @@ function Home({ setIsOpened }) {
               onDragStart={(e) => {
                 e.preventDefault();
               }}
-              href="https://www.discordapp.com/users/557569088466190356"
+              href="https://discord.gg/ffSwmz4SX3"
               className="hover:text-[#7289da] hover:scale-[1.1] transition-transform duration-300"
               target="_blank"
               rel="noopener noreferrer"

@@ -55,4 +55,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
         run: touch CNAME
-        run: echo "liqki.me" > CNAME
+          echo "liqki.me" > CNAME

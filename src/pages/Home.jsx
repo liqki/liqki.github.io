@@ -76,7 +76,7 @@ function Home({ setIsOpened }) {
               onDragStart={(e) => {
                 e.preventDefault();
               }}
-              href="https:chat.liqki.me"
+              href="https://chat.liqki.me"
               className="hover:text-pink-400 hover:scale-[1.1] transition-transform duration-300"
               target="_blank"
               rel="noopener noreferrer"
